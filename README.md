@@ -13,6 +13,7 @@ The node setup is done using Python job submission scripts with Jinja2 templates
 - **`job_script_template.j2`**: Jinja2 template for generating SLURM job scripts
 - **`scripts/worker_setup.py`**: Worker script that handles the setup on each node
 - **`scripts/monitor_gpu_utilization.sh`**: Script for monitoring GPU utilization during benchmarks
+- **`submit_disagg.sh`**: A simple one-liner script that invokes the `submit_job_script.py`
 
 ## Logs Folder Structure
 
@@ -151,4 +152,3 @@ For simplicity of the example, we will make some assumptions about your SLURM cl
 ## Outputs
 
 Benchmark results and outputs are stored in the `outputs/` directory, which is mounted into the container.
-# dynamo-sglang-benchmark
