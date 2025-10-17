@@ -21,6 +21,7 @@ fi
 
 # Parse arguments
 mode=$1
+cmd="dynamo"
 
 # Validate mode argument
 if [ "$mode" != "prefill" ] && [ "$mode" != "decode" ]; then
