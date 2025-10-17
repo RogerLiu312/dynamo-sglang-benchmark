@@ -299,7 +299,7 @@ def main(input_args: list[str] | None = None):
         import os
 
         for job_id in submitted_job_ids:
-            logs_dir = os.path.join("logs", str(job_id))
+            logs_dir = args.log_dir
             os.makedirs(logs_dir, exist_ok=True)
             dest_script_path = os.path.join(logs_dir, f"{job_id}_sbatch.sh")
             # temp_file is closed by now, so we need to read from temp_file.name
