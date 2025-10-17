@@ -192,6 +192,9 @@ def _parse_command_line_args(args: list[str] | None = None) -> argparse.Namespac
         help="Tries to launch the job multiple times to catch transient errors",
     )
 
+    parser.add_argument(
+        "--log-dir", default="dummy", help="Log directory path"
+    )
     return parser.parse_args(args)
 
 
@@ -271,6 +274,7 @@ def main(input_args: list[str] | None = None):
         "do_profile": profiler_config["type"] != "manual",
         "profiler_type": profiler_config["type"],
         "profiler_arg": parsable_config,
+        "log_dir": args.log_dir,
     }
 
     with tempfile.NamedTemporaryFile(mode="w", suffix=".sh") as temp_file:

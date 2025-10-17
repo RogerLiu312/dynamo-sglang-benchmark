@@ -104,6 +104,7 @@ command=(
     --profiler "${profiler_args}"
     $EXTRA_SLURM_ARGS
     --retries $RETRIES
+    --log-dir $LOG_DIR
 )
 
 "${command[@]}"
