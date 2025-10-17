@@ -2,15 +2,15 @@
 # SPDX-FileCopyrightText: Copyright (c) 2025 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
 # SPDX-License-Identifier: Apache-2.0
 # Example: ./submit_disagg.sh 2 1 2 1 0 1024 1024 "16" inf "--extra-slurm-args gpus-per-node=4 --extra-slurm-args segment=4" 0
-export SLURM_ACCOUNT=general_infra-rd_gsw
-export SLURM_PARTITION=batch
-export TIME_LIMIT="00:60:00"
-export MODEL_PATH=/lustre/fsw/portfolios/coreai/projects/coreai_dlalgo_ci/artifacts/model/deepseek-r1_pyt/safetensors_mode-instruct/hf-5dde110-nim_fp8/
-export CONFIG_DIR=/home/rogliu/deepep_config/
-export CONTAINER_IMAGE=nvcr.io/nvidia/ai-dynamo/sglang-runtime:0.5.1-rc0.pre3
-export concurrency_list="16x32"
-export ISL=1024
-export OSL=1024
+# export SLURM_ACCOUNT=general_infra-rd_gsw
+# export SLURM_PARTITION=batch
+# export TIME_LIMIT="00:60:00"
+# export MODEL_PATH=/lustre/fsw/portfolios/coreai/projects/coreai_dlalgo_ci/artifacts/model/deepseek-r1_pyt/safetensors_mode-instruct/hf-5dde110-nim_fp8/
+# export CONFIG_DIR=/home/rogliu/deepep_config/
+# export CONTAINER_IMAGE=nvcr.io/nvidia/ai-dynamo/sglang-runtime:0.5.1-rc0.pre3
+# export concurrency_list="16x32"
+# export ISL=1024
+# export OSL=1024
 
 usage() {
     cat << 'USAGE'
