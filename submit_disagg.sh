@@ -62,8 +62,8 @@ check_env MODEL_PATH
 check_env CONFIG_DIR
 check_env CONTAINER_IMAGE
 
-GPU_TYPE="gb200-fp8"
-GPUS_PER_NODE=4
+: "${GPU_TYPE:=gb200-fp8}"
+: "${GPUS_PER_NODE:=4}"
 : "${NETWORK_INTERFACE:=enP6p9s0np0}"
 
 # COMMAND_LINE ARGS
