@@ -91,7 +91,7 @@ if [ "$ADDITIONAL_FRONTENDS" -gt 0 ]; then
             frontend_hosts+=("$node_name")
             frontend_ips+=("$node_ip")
             echo "Additional frontend $i on node $frontend_node_idx: $node_name ($node_ip)"
-            frontend_node_idx=$((frontend_node_idx + nodes_per_frontend))
+            frontend_node_idx=$((frontend_node_idx + 1))
         fi
     done
 fi
@@ -219,7 +219,7 @@ if [ "$ADDITIONAL_FRONTENDS" -gt 0 ]; then
             echo "$cmd"
             $cmd &
             frontend_idx=$((frontend_idx + 1))
-            frontend_node_idx=$((frontend_node_idx + nodes_per_frontend))
+            frontend_node_idx=$((frontend_node_idx + 1))
         fi
     done
 fi
