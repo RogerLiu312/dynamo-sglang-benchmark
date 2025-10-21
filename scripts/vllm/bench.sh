@@ -35,9 +35,9 @@ set -e
 # Warmup the model
 warmup_isl=$chosen_isl
 warmup_osl=$chosen_osl
-warmup_prompts=10000
-warmup_concurrencies=10000
-warmup_req_rate=250
+warmup_prompts=256
+warmup_concurrencies=128
+warmup_req_rate=128
 set -x
 python3 benchmark_serving.py \
     --model ${model_name} --tokenizer ${model_path} \
